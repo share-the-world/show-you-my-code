@@ -1,0 +1,17 @@
+{
+  "name": "javascript",
+  "version": "leecode每日一题",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test1": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0"
+  }
+}
