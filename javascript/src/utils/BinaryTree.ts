@@ -1,12 +1,13 @@
 
-export interface TreeNode {
+// 二叉树
+export interface BinaryTree {
   val: number
-  left?: TreeNode
-  right?: TreeNode
+  left?: BinaryTree
+  right?: BinaryTree
 }
 
 // 测试数据
-export const treeNode: TreeNode = {
+export const treeNode: BinaryTree = {
   val:12,
   left: {
     val:1,
