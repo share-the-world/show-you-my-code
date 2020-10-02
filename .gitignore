@@ -1,4 +1,9 @@
 .idea
+*/*.idea
 */target
 */*/target
 */*/*.iml
+.vscode
+*/*/.classpath
+*/*/.project
+*/*/.settings/*
