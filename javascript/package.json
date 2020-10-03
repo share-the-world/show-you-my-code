@@ -1,6 +1,7 @@
 {
   "name": "javascript",
-  "version": "leecode每日一题",
+  "version": "1.0",
+  "description": "leecode每日一题",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
