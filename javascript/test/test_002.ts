@@ -1,5 +1,5 @@
-import { BinaryTree } from '../utils/BinaryTree'
-import { insertIntoBST } from '../code/002'
+import { BinaryTree } from '../src/utils/BinaryTree'
+import { insertIntoBST } from '../src/code/002'
 const data1: BinaryTree = {
   val:4,
   left: {
