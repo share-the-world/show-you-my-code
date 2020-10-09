@@ -1,4 +1,4 @@
-import { treeNode } from '../../utils/BinaryTree'
+import { treeNode } from '../../definition/BinaryTree'
 
 /**
  * 后序遍历
