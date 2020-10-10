@@ -1,7 +1,7 @@
 import { NullLiteral } from "typescript";
 
-//链表
-interface ListNode {
+//定义：链表
+export interface ListNode {
   val: number;
   next: ListNode | null | undefined
 }
