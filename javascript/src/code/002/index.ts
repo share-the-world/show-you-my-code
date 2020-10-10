@@ -1,4 +1,4 @@
-import { BinaryTree } from '../../utils/BinaryTree'
+import { BinaryTree } from '../../definition/BinaryTree'
 
 // 对二叉搜索树插入值
 export const insertIntoBST = (root: BinaryTree, val: number):BinaryTree => {
