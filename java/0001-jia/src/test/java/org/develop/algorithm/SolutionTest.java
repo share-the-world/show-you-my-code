@@ -74,4 +74,32 @@ public class SolutionTest {
         Integer[] expect = {4, 5, 2, 3, 1};
         Assert.assertArrayEquals(expect, result.toArray());
     }
+
+    /**
+     * test case 5
+     * 满二叉树
+     */
+    @Test
+    public void testDoIt6(){
+        Solution solution = new Solution();
+        Integer[] initArray = {};
+        List<Integer> result = solution.doIt(initArray);
+        System.out.println(result);
+        Integer[] expect = {};
+        Assert.assertArrayEquals(expect, result.toArray());
+    }
+
+        /**
+     * test case 5
+     * 满二叉树
+     */
+    @Test
+    public void testDoIt7(){
+        Solution solution = new Solution();
+        Integer[] initArray = {null};
+        List<Integer> result = solution.doIt(initArray);
+        System.out.println(result);
+        Integer[] expect = {};
+        Assert.assertArrayEquals(expect, result.toArray());
+    }
 }

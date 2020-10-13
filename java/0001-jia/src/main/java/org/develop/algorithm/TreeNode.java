@@ -1,17 +1,13 @@
 package org.develop.algorithm;
-
-import java.io.Serializable;
-
 /**
  * 任意一个二叉树包含三个元素：值，左子树，右子树
  * @author heshiyuan 
  */
-public class TreeNode implements Serializable{
+public class TreeNode{
     
     /**
      *
      */
-    private static final long serialVersionUID = 515515009137985766L;
     private Integer value;
     private TreeNode left;
     private TreeNode right; 
