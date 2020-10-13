@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test1": "ts-node src/index.ts",
+    "test1": "ts-node src/code/013/index.ts",
     "test": "jest"
   },
   "dependencies": {
