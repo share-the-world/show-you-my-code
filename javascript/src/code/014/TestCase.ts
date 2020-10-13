@@ -16,14 +16,14 @@ export const getTreeCase1 = (): BinaryTree => {
 export const treeNodeCase2: BinaryTree = {
   val:12,
   left: {
-    val:1,
+    val:6,
     left:{ val: 2},
-    right: { val: 3}
+    right: { val: 7}
   },
   right: {
-    val:7,
-    left: { val: 4},
-    right: { val: 5}
+    val:13,
+    left: { val: 12},
+    right: { val: 15}
   }
 }
 // 测试数据

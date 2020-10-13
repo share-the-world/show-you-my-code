@@ -1,2 +1,2 @@
 export { ListNode, ListNodeType } from './ListNode'
-export { BinaryTree } from './BinaryTree'
+export { BinaryTree,BinaryTreeType } from './BinaryTree'
