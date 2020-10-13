@@ -1,5 +1,8 @@
 package java.wuchao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 停车系统
  * @author wuchao
@@ -30,5 +33,12 @@ public class ParkingSystem {
             default:
                 return false;
         }
+    }
+
+    public static void main(String[] args) {
+        List list = new ArrayList<Integer>();
+        list.sort((a,b) -> {
+
+        });
     }
 }
