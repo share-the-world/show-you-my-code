@@ -17,3 +17,6 @@
 
 # 其他题目
 - [36 场夜喵双周赛-1](../java/wuchao/README.md)
+
+# 动态规划算法
+- [1.最长上升子序列](../item/dynamic/01-README.md)
