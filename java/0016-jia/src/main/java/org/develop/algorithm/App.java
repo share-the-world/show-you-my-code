@@ -29,7 +29,7 @@ public class App {
         for(Character key : map.keySet()){
             if(null != map.get(key)&& map.get(key) % args.length == 0){
                 for (int i = 0; i < map.get(key)/args.length ; i++) {
-                    returnList.add(key.toString()) ;
+                    returnList.add(key.toString());
                 }
             }
         }
