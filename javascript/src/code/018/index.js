@@ -15,3 +15,5 @@ const case2 = [-7,-3,2,3,11];
 (() => {
   sortedSquares(case1)
 })()
+
+document.getElementById('p_id').html = Date.now()
