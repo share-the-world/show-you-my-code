@@ -2,7 +2,7 @@ import {BinaryTree,BinaryTreeType} from '../definition';
 
 type ArrayType = (number | null | undefined)[];
 
-// 二叉树转换为
+// 二叉树转换为数组
 export const binaryTree2Array = (node: BinaryTree) => {
   
 }
@@ -23,18 +23,25 @@ export const array2BinaryTree = (arr: ArrayType): BinaryTree => {
       if (!list[i]) {// 如果是null，就要添加新节点
         list[i] = { val:Number(arr[i]), left: null, right: null };
       }
+      let leftIndex = i*2+1;// 左子树位置
+      let rightIndex = i*2+2;// 右子树位置
       console.log(`i=${i}, node=${JSON.stringify(list[i])}, length=${list.length}`)
-      
-      isExist(arr[i*2+1]) && (list[i]!.left = { val: Number(arr[i*2+1]) });// 奇数为左，存在就添加
-      isExist(arr[i*2+2]) && (list[i]!.right = { val: Number(arr[i*2+2]) });// 偶数在右
+      if (isExist(arr[leftIndex])) {
+        (list[i]!.left = { val: Number(arr[leftIndex]) });// 奇数为左
+        list[leftIndex] = list[i]!.left;// leftIndex位置上赋值左节点
+      }
+      if (isExist(arr[rightIndex])) {
+        list[i]!.right = { val: Number(arr[rightIndex]) };// 偶数在右
+        list[rightIndex] = list[i]!.right;// leftIndex位置上赋值右节点
+      }
 
-      console.log(`i*2+1左 = ${i*2+1},${arr[i*2+1]}`)
-      console.log(`i*2+2右 = ${i*2+2},${arr[i*2+2]}`)
+      console.log(`leftIndex左 = ${leftIndex},${arr[leftIndex]}`)
+      console.log(`rightIndex右 = ${rightIndex},${arr[rightIndex]}`)
       console.log(`i=${i}, node=${JSON.stringify(list[i])}, length=${list.length}`)
       console.log('_____________________________________')
     }
   }
-  console.log('二叉树：',list[0])
+  console.log('二叉树：',JSON.stringify(list[0]))
   return list[halfLen]!;// 头结点
 }
 // 存在并且为数字类型
@@ -44,7 +51,7 @@ const isExist = (s: any): boolean => {
 
 const print = () => {}
 
-const case1 = [50, 25,75,null, 37, 62, 84, null, null,31,43,55,null,null];
+const case1 = [50, 25,75,null, 37, 62, 84, null, null,31,43,55,null,92];
 
 
 // 执行测试： 
