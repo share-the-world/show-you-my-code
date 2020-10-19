@@ -3,8 +3,16 @@ import {BinaryTree,BinaryTreeType} from '../definition';
 type ArrayType = (number | null | undefined)[];
 
 // 二叉树转换为数组
-export const binaryTree2Array = (node: BinaryTree) => {
-  
+export const binaryTree2Array = (node: BinaryTree): ArrayType => {
+  if (!node.left && !node.right) return [node.val];
+  const list: ArrayType = [node.val];
+  let left = node.left
+  let right = node.right
+  let i = 0;
+  while (left || right) {
+
+  }
+  return [];
 }
 
 /**
@@ -49,7 +57,7 @@ const isExist = (s: any): boolean => {
   return s && typeof s === 'number';
 }
 
-const print = () => {}
+const printBinaryTree = () => {}
 
 const case1 = [50, 25,75,null, 37, 62, 84, null, null,31,43,55,null,92];
 
