@@ -1,9 +1,8 @@
-import { JsxEmit } from 'typescript';
 /**
  * 1002. 查找常用字符
  * @param A 
  */
-const commonChars = (A: string[]): string[] => {
+export const commonChars = (A: string[]): string[] => {
   const res: string[] = [];//结果集
   let position = 0;
   let start:string = A[position];// 第一个字符串
@@ -44,18 +43,3 @@ const subString = (str: string, index: number) => {
   }
 }
 
-
-const case1 = ["bella","label","roller"];
-const case2 = ["cool","lock","cook"];
-const case3 = ['acabcddd',"bcbdbcbd","baddbadb","cbdddcac","aacbcccd","ccccddda","cababaab","addcaccd"];
-const case4 = ["aedefeedca","bdcfcfaece","bddebbaffd","aeeedcfdcb","cbbbbdcdea",
-              "cfcfebbcdc","bcfeefeaca","cdbfcbfaeb","ecdabfbbae","ccbecbffaa"];
-
-// 执行测试:yarn run ts-node src/code/016/index.ts
-(() => {
-  commonChars(case1)
-  // console.log('**********************************')
-  // commonChars(case2)
-  // commonChars(case3)
-  // commonChars(case4)
-})()
