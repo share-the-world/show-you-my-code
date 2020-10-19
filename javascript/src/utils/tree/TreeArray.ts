@@ -1,18 +1,28 @@
-import {BinaryTree,BinaryTreeType} from '../definition';
-
+import {BinaryTree,BinaryTreeType} from '../../definition';
+import {getLevel} from './traverse'
 type ArrayType = (number | null | undefined)[];
 
 // 二叉树转换为数组
-export const binaryTree2Array = (node: BinaryTree): ArrayType => {
-  if (!node.left && !node.right) return [node.val];
-  const list: ArrayType = [node.val];
-  let left = node.left
-  let right = node.right
-  let i = 0;
-  while (left || right) {
-
+export const binaryTree2Array = (root: BinaryTree): ArrayType => {
+  if (!root.left && !root.right) return [root.val];
+  const treeLevel = getLevel(root);// 获取树层数
+  const list:(number | null)[][] = [];// 二维数组，第一维是每一层，第二维是元素
+  // 递归方法, level从0开始计数
+  const loop = (node: BinaryTreeType, level: number) => {
+    if (level === treeLevel) return;// 超出层级，结束递归
+    if (list.length === level) {
+      list.push([])
+    }
+    list[level].push(node ? node.val : null)
+    loop(node ? node.left : null, level+1);
+    loop(node ? node.right : null, level+1);
   }
-  return [];
+  loop(root,0);
+  const res = list.reduce((arr: ArrayType,item): ArrayType => {
+    return arr.concat(item);
+  },[])
+  console.log('二叉树转数组,res: ',res)
+  return res;
 }
 
 /**
@@ -50,7 +60,7 @@ export const array2BinaryTree = (arr: ArrayType): BinaryTree => {
     }
   }
   console.log('二叉树：',JSON.stringify(list[0]))
-  return list[halfLen]!;// 头结点
+  return list[0]!;// 头结点
 }
 // 存在并且为数字类型
 const isExist = (s: any): boolean => {
@@ -64,5 +74,5 @@ const case1 = [50, 25,75,null, 37, 62, 84, null, null,31,43,55,null,92];
 
 // 执行测试： 
 (() => {
-  array2BinaryTree(case1);
+  // array2BinaryTree(case1);
 })()
