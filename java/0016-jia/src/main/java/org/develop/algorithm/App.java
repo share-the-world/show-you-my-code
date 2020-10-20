@@ -1,7 +1,6 @@
 package org.develop.algorithm;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,30 +32,24 @@ public class App {
         char[][] charArray = new char[args.length][26];
 
         for (int i = 0; i < args.length; i++) {
-            char[] firstLine = args[i].toCharArray();
-            for (int j = 0; j < firstLine.length; j++) {
-                int index = firstLine[j] - 'a';
-                charArray[i][index] = (char)(firstLine[index] + 1);
-                System.out.println("000=" + charArray[i][index]);
+            for(char nowChar : args[i].toCharArray()){
+                charArray[i][nowChar - 'a'] ++;
             } 
         }
        
         List<String> returnList = new ArrayList<>();
 
-        // for (int i = 0; i < charArray[0].length; i++) {
-        //     int min = Integer.MAX_VALUE;
-        //     for (int j = 0; j < args.length; j++) {
-        //         if(charArray[j][i]>0 && charArray[j][i] < min){
-        //             min = charArray[j][i];
-        //         } 
-        //     }
-        //     if(min == Integer.MAX_VALUE){
-        //         continue;
-        //     }
-        //     for (int j = 0; j < min; j++) {
-        //         returnList.add(String.valueOf((char) (min + 'a'))) ;
-        //     }
-        // }
+        for (int i = 0; i < charArray[0].length; i++) {
+            int min = Integer.MAX_VALUE;
+            for (int j = 0; j < args.length; j++) {
+                if(charArray[j][i] < min){
+                    min = charArray[j][i];
+                }
+            }
+            for (int j = 0; j < min; j++) {
+                returnList.add(String.valueOf((char) (i + 'a'))) ;
+            }
+        }
         return returnList;
     }
 }
