@@ -2,7 +2,10 @@ import {BinaryTree,BinaryTreeType} from '../../definition';
 import {getLevel} from './traverse'
 type ArrayType = (number | null | undefined)[];
 
-// 二叉树转换为数组
+/**
+ * 二叉树转换为数组.使用二位数组，第一维表示层，第二维表示节点
+ * @param root 
+ */
 export const binaryTree2Array = (root: BinaryTree): ArrayType => {
   if (!root.left && !root.right) return [root.val];
   const treeLevel = getLevel(root);// 获取树层数
@@ -67,12 +70,11 @@ const isExist = (s: any): boolean => {
   return s && typeof s === 'number';
 }
 
+// 格式化打印二叉树
 const printBinaryTree = () => {}
 
-const case1 = [50, 25,75,null, 37, 62, 84, null, null,31,43,55,null,92];
+
 
 
 // 执行测试： 
-(() => {
-  // array2BinaryTree(case1);
-})()
+// require('../../../__tests__/test_tree1')
