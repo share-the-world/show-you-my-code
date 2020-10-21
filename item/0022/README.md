@@ -16,3 +16,5 @@
 
 # 类似题目
 [第15天-两两交换链表中的节点](../0015/README.md)
+
+### [解题思路](../../javascript/src/code/022/README.md)
