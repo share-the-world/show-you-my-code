@@ -14,7 +14,7 @@ export const getLevel = (root: BinaryTree): number => {
     if (list.length === level) {
       list.push([]);
     }
-    list[level].push(node?.val);
+    list[level].push(node.val);
     if(node.left) {
       loop(node.left, level+1)
     }
@@ -25,4 +25,22 @@ export const getLevel = (root: BinaryTree): number => {
   loop(root,res)
   console.log('list:',JSON.stringify(list))
   return res + 1;// 层级从1开始
+}
+
+// 层级遍历，返回二维数组
+export const mapForLevel = (head: BinaryTree):number[][] => {
+  const list: number[][] = [];
+  let level = 0;
+  const loop = (node: BinaryTree, level = 0) => {
+    if (list.length === level) {
+      list.push([])
+    }
+    list[level].push(node.val);
+
+    node.left &&loop(node.left, level+1);
+    node.right &&loop(node.right, level+1);
+  }
+  loop(head,level);
+  console.log(list)
+  return list
 }
