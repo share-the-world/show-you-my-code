@@ -19,7 +19,7 @@ export const isLongPressedName = (name: string, typed: string): boolean => {
   }
   return true;
 }
-
+// 模拟栈结构，匹配到字符就出栈
 export const doShift = (s: string,arr: string[]): number => {
   if (arr.length === 0) return 0;
   let l: (string | undefined) = arr[0];
