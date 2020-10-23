@@ -1,4 +1,3 @@
-import { type } from "os";
 
 //链表
 interface ListNode {
@@ -41,9 +40,7 @@ export const addTwoNumbers = (l1: ListNode , l2: ListNode): ListNode => {
   }
   return loop(l1,l2, {val: 0})!;
 }
-export const array2Node = () => {
-  
-}
+
 
 
 const res = addTwoNumbers(l1,l2)
