@@ -11,7 +11,7 @@ public class App{
             return false;
         }
         int i=0, j=0;
-        while(i < name.length() && j < typed.length()){
+        while(i < name.length() || j < typed.length()){
             // 相等，两个指针都平移
             if (i<name.length()&&j<typed.length()&&name.charAt(i)==typed.charAt(j)){
                 i++;
