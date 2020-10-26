@@ -36,6 +36,8 @@
 
 # 二叉树题目
 - [1.二叉树的层次遍历 II](../item/binaryTree/01-level-traverse.md)
+- [2.二叉树的最大深度](../item/binaryTree/02-maxDeep.md)
+- [3.对称二叉树](../item/binaryTree/03-symmetry.md)
 
 
 # 链表
