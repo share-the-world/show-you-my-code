@@ -44,3 +44,28 @@ export const mapForLevel = (head: BinaryTree):number[][] => {
   console.log(list)
   return list
 }
+
+/**
+ * 层级遍历,返回二位数组.把二叉树当做完美而查出进行遍历
+ * @param root 
+ */
+export const mapForLevelWithPerfectBT = (root: BinaryTree): (number | null) [][] => {
+  const res: (number | null) [][] = [];
+  const deepLevel = getLevel(root);
+  const loop = (node: BinaryTreeType, level: number) => {
+    if(level === deepLevel) {// 达到最大层级
+      return;
+    }
+    if (res.length === level) {
+      res.push([]);
+    }
+    console.log(`level=${level},res=`,res)
+    const arr = res[level];
+    arr.push(node ? node.val : null);
+    loop(node? node.left : null, level+1);
+    loop(node? node.right : null, level+1);
+  }
+  loop(root, 0);
+  console.log('res',res)
+  return res;
+}

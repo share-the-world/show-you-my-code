@@ -26,3 +26,6 @@
 **进阶：**
 
 - 你可以运用递归和迭代两种方法解决这个问题吗？
+
+
+- [解答](../../javascript/src/code/2000_tree/003_symmetryTree.ts)
