@@ -6,7 +6,7 @@ export const isSymmetric = (root: BinaryTree): boolean => {
   return false;
 }
 /**
- * 层级遍历,范围二位数组
+ * 层级遍历,返回二位数组
  * @param root 
  */
 export const getLevels = (root: BinaryTree): (number | null) [][] => {
