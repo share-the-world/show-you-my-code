@@ -11,13 +11,14 @@ export const sumNumbers = (root: BinaryTree): number => {
   if (!root) return 0;
   const nQ: BinaryTree[] = [root]; // 队列，存节点
   const vQ: string[] = [String(root.val)];// 队列，存节点拼接的数组
-  const arr: string[] = [];// 数字集合，每条路径表示一个数字
+  let result: number = 0;
   while (nQ.length > 0) {
     const node = nQ.shift()!;
     const str = vQ.shift()!;
     // 左右节点都不存在，说明是叶子节点，跳出本次循环，执行下一次
     if(!node.left && !node.right) {
-      arr.push(str)
+      console.log('str=',str)
+      result += parseInt(str);// 求和
       continue;
     }
     if (node.left) {
@@ -29,11 +30,6 @@ export const sumNumbers = (root: BinaryTree): number => {
       vQ.push(str + node.right.val);
     }
   }
-  // 求和
-  let res: number = 0
-  for (let val of arr) {
-    res += Number(val);
-  }
-  // console.log(`arr=${arr}, res=${res}`)
-  return res;
+  console.log('求和=',result)
+  return result;
 }
