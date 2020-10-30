@@ -1,4 +1,9 @@
-
+/**
+ * 岛屿的周长
+ * 思路：数学几何求解
+ * 岛屿数x4 - 紧邻岛屿数x2
+ * @param grid 
+ */
 export const islandPerimeter = (grid: number[][]): number => {
   let count = 0;// 正方形个数
   let repeat = 0; // 重叠的边数
