@@ -1,22 +1,22 @@
 package org.develop.algorithm;
 
 /**
- * Hello world!
+ * "ababcbacadefegdehijhklij"
  * @author heshiyuan
  */
 public class App {
     public Integer[] doIt(String longStr){
-        Integer[] returnArray = new Integer[]();
+        Integer[] returnArray = new Integer[longStr.length()];
         int index = 0;
-        for (int i = 0; i < longStr.length; i++) {
+        for (int i = 0; i < longStr.length(); i++) {
             char[] charArray = longStr.toCharArray();
-            for (int j = i; j < charArray.length; j++) {
+            for (int j = (i + 1); j < charArray.length; j++) {
                 if(charArray[i] == charArray[j]){
-                    returnArray[index] = i;
+                    // returnArray[index ++] = i;
+                    System.out.println(charArray[i] + " " + i);
                 }
             }
         }
-        System.out.println(returnArray);
         return returnArray;
     }
 }

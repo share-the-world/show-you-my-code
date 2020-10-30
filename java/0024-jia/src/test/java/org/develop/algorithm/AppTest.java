@@ -1,4 +1,7 @@
 package org.develop.algorithm;
+
+import org.junit.Test;
+
 /**
  * Unit test for simple App.
  */
