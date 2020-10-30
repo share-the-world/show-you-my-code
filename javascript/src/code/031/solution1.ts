@@ -1,8 +1,8 @@
 import {BinaryTree, BinaryTreeType} from '../../definition';
 
 /**
- * 求根到叶子节点数字之和
- * 解题思路：深度优先搜索(先序遍历)
+ * 求根到叶子节点数字之和-
+ * 解题思路：递归-深度优先搜索(先序遍历)
  * @param root 
  */
 export const sumNumbers = (root: BinaryTree): number => {
