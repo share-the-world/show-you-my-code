@@ -7,7 +7,7 @@ package org.develop.algorithm;
 public class App {
     public Integer[] doIt(String longStr){
         Integer[] returnArray = new Integer[longStr.length()];
-        int index = 0;
+        // int index = 0;
         for (int i = 0; i < longStr.length(); i++) {
             char[] charArray = longStr.toCharArray();
             for (int j = (i + 1); j < charArray.length; j++) {
