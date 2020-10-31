@@ -50,3 +50,5 @@ const getInterSection = (a1:number[], a2: number[]): number[] | undefined => {
 }
 
 const arr =  [[1,3],[2,6],[2,8],[8,10],[15,18]];
+
+const set = new Set()
