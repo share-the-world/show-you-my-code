@@ -3,7 +3,7 @@ import { BinaryTree, BinaryTreeType } from '../../definition'
 type ValueType = (number | null);
 /**
  * 路径总和
- * 此方案有漏洞，不采纳
+ * 此方案有漏洞，不正确
  * 思路：
  * 1.将二叉树转为数组
  * 2.遍历二叉树最后一层，从底部向上遍历，例如底部节点L[i],其父节点为L[(i-1)/2]
