@@ -1,5 +1,6 @@
 /**
  * 有效的山脉数组
+ * 此思路复杂度为N^2,java实现的复杂度为n
  * https://leetcode-cn.com/problems/valid-mountain-array/
  * @param A 
  */
