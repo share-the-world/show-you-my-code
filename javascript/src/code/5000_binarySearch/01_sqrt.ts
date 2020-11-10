@@ -9,16 +9,16 @@ export const mySqrt = (x: number): number => {
   let i = 0, j = x, mid = 0;
   while (i <= j) {
     mid = i + ((j-i) >> 1);// 
-    console.log('mid=',mid)
+    // console.log('mid=',mid)
     const result = mid * mid
     if (result > x) {
-      j = mid - 1;
+      j = mid;
     } else if (result === x) {
       return mid
     } else if ((mid+1) * (mid+1) > x){// 如果 mid^2 < x < (mid+1)^2
       return mid
     } else {
-      i = mid -1
+      i = mid
     }
   }
   return i;
