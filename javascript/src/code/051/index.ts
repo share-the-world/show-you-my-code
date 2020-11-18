@@ -25,7 +25,7 @@ export const canCompleteCircuit = (gas: number[], cost: number[]): number => {
   let start = head;
   let surplus = head.gas;
   do {
-    // console.log(`surplus=${surplus},cost=${p.cost},next.gas=${p.next!.gas}`)
+    console.log(`surplus=${surplus},cost=${p.cost},next.gas=${p.next!.gas}`)
     surplus = (surplus - p.cost + p.next!.gas);// 省油油量，从当前加油站走到下一个加油站
     console.log(`p-index=${p.index}, start-index=${start.index},surplus=${surplus}`)
     if (surplus > 0) {
