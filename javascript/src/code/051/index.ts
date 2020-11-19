@@ -20,7 +20,7 @@ export const canCompleteCircuit = (gas: number[], cost: number[]): number => {
       temp = temp.next;
     }
   }
-  console.log(head)
+  // console.log(head)
   let p = head;
   let start = head;
   let surplus = head.gas;
