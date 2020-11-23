@@ -6,15 +6,17 @@ import {ListNode, ListNodeType} from '../../definition'
  */
 export const insertionSortList = (head: ListNode): ListNode => {
   if (!head || !head.next) return head;
-  let root = head;
-  let i = head, j = i.next;
-  while(j) {
-    if (i.val > j.val) {
-      
-    } else {
-
+  let root: ListNode = {val: -1, next: head};
+  let i: ListNodeType = head;
+  while(i) {
+    let j: ListNodeType = root;
+    let iNext: ListNodeType = i.next;
+    let jNext: ListNodeType = j.next;
+    while(j && iNext) {
+      if (j.val > iNext.val) {}
     }
-    j = j.next;
+    i = iNext;
   }
-  return {val: 0, next: null}
+
+  return root.next!;
 }
