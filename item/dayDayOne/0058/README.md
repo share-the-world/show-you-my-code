@@ -1,3 +1,5 @@
+[1370. 上升下降字符串](https://leetcode-cn.com/problems/increasing-decreasing-string/)
+
 给你一个字符串 s ，请你根据下面的算法重新构造字符串：
 
 - 1.从 s 中选出 最小 的字符，将它 接在 结果字符串的后面。
