@@ -33,6 +33,7 @@
 输出：[0.50000,2.00000,-1.00000,-1.00000]
 ```
 
+
 **提示：**
 
 - `1 <= equations.length <= 20`
@@ -44,6 +45,10 @@
 - `queries[i].length == 2`
 - `1 <= Cj.length, Dj.length <= 5`
 - `Ai, Bi, Cj, Dj` 由小写英文字母与数字组成
+
+
+- [官方解答](https://leetcode-cn.com/problems/evaluate-division/solution/399-chu-fa-qiu-zhi-nan-du-zhong-deng-286-w45d/)
+- [知乎-并查集深度讲解](https://zhuanlan.zhihu.com/p/98406740)
 
 **练习**
 
