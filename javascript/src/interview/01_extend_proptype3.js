@@ -19,3 +19,4 @@ var aWoman = new Woman('fanjing');
 // aWoman.age = 24;
 console.log('name=',aWoman.name)
 console.log('sex=',aWoman.sex)
+console.log(aWoman.constructor)
