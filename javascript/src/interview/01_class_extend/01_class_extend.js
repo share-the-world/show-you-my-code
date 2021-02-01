@@ -11,3 +11,4 @@ export function Person(name = ''){
 }
 // 父类原型
 Person.prototype.sex = '男/女'
+
