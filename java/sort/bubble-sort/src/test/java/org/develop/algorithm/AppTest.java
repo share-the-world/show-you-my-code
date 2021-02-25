@@ -14,14 +14,17 @@ public class AppTest{
    App app = new App();
    @Test
    public void testDoIt(){
-       Assert.assertArrayEquals(new int[]{1, 3, 5, 9}, app.doIt(new int[]{3, 1, 9, 5}));
+      int[] sort = app.doItAsc(new int[]{1, 3, 5, 9, 20, 111, 0, -3});
+      for (int i = 0; i < sort.length; i++) {
+         System.out.print(sort[i] + " "); 
+      }
    }
    @Test
    public void testDoIt2(){
-    Assert.assertArrayEquals(new int[]{1, 3, 4, 7, 9}, app.doIt(new int[]{9, 7, 4, 3, 1}));
+    int[] sort = app.doItDesc(new int[]{1, 3, 5, 9, 20, 111, 0, -3});
+      for (int i = 0; i < sort.length; i++) {
+         System.out.print(sort[i] + " "); 
+      }
     }
-    @Test
-    public void testDoIt3(){
-        logger.info(""); 
-    }
+    
 }
