@@ -1,30 +1,85 @@
 package org.develop.algorithm;
 
-import java.beans.Transient;
-import java.util.logging.Logger;
-
-import org.junit.Assert;
+import java.util.Random;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest{
-    Logger logger = Logger.getLogger(AppTest.class.getName());
    App app = new App();
-   @Test
-   public void testDoIt(){
-      int[] sort = app.doItAsc(new int[]{1, 3, 5, 9, 20, 111, 0, -3});
-      for (int i = 0; i < sort.length; i++) {
-         System.out.print(sort[i] + " "); 
-      }
+   int[] one = new int[1];
+   int[] two = new int[10];
+   int[] three = new int[100];
+   int[] four = new int[1000];
+   int[] five = new int[10000];
+   int[] six = new int[100000];
+
+   @Before
+   public void before(){
+      one = generateRandomNumber(1);
+      two = generateRandomNumber(10);
+      three = generateRandomNumber(100);
+      four = generateRandomNumber(1000);
+      five = generateRandomNumber(10000);
+      six = generateRandomNumber(100000);
    }
    @Test
-   public void testDoIt2(){
-    int[] sort = app.doItDesc(new int[]{1, 3, 5, 9, 20, 111, 0, -3});
-      for (int i = 0; i < sort.length; i++) {
-         System.out.print(sort[i] + " "); 
+   public void testDoItOne(){
+      System.out.print(1 + "  ");
+      app.doItAsc(one);
+      System.out.println("----------------");
+   }    
+
+   @Test
+   public void testDoItTwo(){
+      System.out.print(2 + "  ");
+      app.doItAsc(two);
+      System.out.println("----------------");
+   }
+   @Test
+   public void testDoItThree(){
+      System.out.print(3 + "  ");
+      app.doItAsc(three);
+      System.out.println("----------------");
+   }
+   @Test
+   public void testDoItFour(){
+      System.out.print(4 + "  ");
+      app.doItAsc(four);
+      System.out.println("----------------");
+   }
+   @Test
+   public void testDoItFive(){
+      System.out.print(5 + "  ");
+      app.doItAsc(five);
+      System.out.println("----------------");
+   }
+   @Test
+   public void testDoItSix(){
+      System.out.print(6 + "  ");
+      app.doItAsc(six);
+      System.out.println("----------------");
+   } 
+
+   // @Test
+   public void testDoItSeven(){
+      System.out.print(7 + "  ");
+      int[] seven = generateRandomNumber(1000000);
+      long start = System.currentTimeMillis();
+      app.doItAsc(seven);
+      long end = System.currentTimeMillis();
+      System.out.println("----------------");
+      System.out.println("耗时："+ (end - start));
+   }
+
+   public static int[] generateRandomNumber(int length){
+      int[] randomArray = new int[length];
+      Random random = new Random();
+      for(int i=0;i<length;i++){
+          randomArray[i] = random.nextInt(length);
       }
-    }
-    
+      return randomArray;
+  }
 }

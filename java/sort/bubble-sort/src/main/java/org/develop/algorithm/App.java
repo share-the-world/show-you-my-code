@@ -1,41 +1,38 @@
 package org.develop.algorithm;
-
-import java.util.logging.Logger;
-
 /**
  * Hello world!
+ * 
  * @author hsy
  */
-public class App{
-    Logger log = Logger.getLogger(App.class.getName());
-    public int[] doItAsc(int[] nums){
-        if(null==nums || nums.length == 0){
+public class App {
+
+    public int[] doItAsc(int[] nums) {
+        if (null == nums || nums.length == 0 || nums.length == 1) {
+            System.out.println("0   0");
             return nums;
         }
+
+        int count = 0, swapCount = 0;
+        // 外层循环仅仅决定比较次数
         for (int i = 0; i < nums.length - 1; i++) {
-           for (int j = 0; j < nums.length - 1 - i; j++) {
-               if(nums[j] > nums[j+1]){
-                int temp = nums[j];
-                nums[j] = nums[j+1];
-                nums[j+1] = temp; 
-               }
-           } 
+            // 内存循环决定比较项
+            int flag = 0;
+            for (int j = 0; j < nums.length - 1 - i; j++) {
+                count++;
+                if (nums[j] > nums[j + 1]) {
+                    swapCount++;
+                    int temp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = temp;
+                    swapCount ++;
+                    flag = 1;
+                }
+            }
+            if(flag == 0){
+                break;
+            }
         }
-        return nums;
-    }
-    public int[] doItDesc(int[] nums){
-        if(null==nums || nums.length == 0){
-            return nums;
-        }
-        for (int i = 0; i < nums.length - 1; i++) {
-           for (int j = 0; j < nums.length - 1 - i; j++) {
-               if(nums[j] < nums[j+1]){
-                int temp = nums[j];
-                nums[j] = nums[j+1];
-                nums[j+1] = temp; 
-               }
-           } 
-        }
+        System.out.println(count + "    " + swapCount);
         return nums;
     }
 }
