@@ -159,3 +159,10 @@ spiralOrder1([
 - 空间复杂度：O(1)
 
 两个相比较，我感觉解法2更好一些，使用的变量少
+
+# 思路扩展
+先增加一个[100x100的二位矩阵](https://raw.githubusercontent.com/shared-code-development/show-you-my-code/master/javascript/src/code/147/matrix_100.json)的测试用例
+
+思考一个问题，矩阵数据特别大，无法一次性加载到内存中，应该如何进行螺旋遍历呢？
+
+**欢迎提出解答方案**
