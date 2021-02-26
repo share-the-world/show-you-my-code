@@ -1,3 +1,4 @@
+import m100 from './matrix_100.json'
 /**
  * 54. 螺旋矩阵(方案1)
  * https://leetcode-cn.com/problems/spiral-matrix/
@@ -27,12 +28,9 @@ const spiralOrder = (matrix: number[][]): number[] => {
         i += DIRECTIONS[pointer][0];
         j += DIRECTIONS[pointer][1];
     }
+    console.log(res)
+    console.log('count=',count)
     return res
 }
 // 测试：
-spiralOrder([
-    [1,2,3,4,5],
-    [6,7,8,9,10],
-    [11,12,13,14,15],
-    [16,17,18,19,20],
-])
+spiralOrder(m100)
