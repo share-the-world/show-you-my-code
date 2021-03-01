@@ -3,16 +3,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.develop.algorithm</groupId>
-  <artifactId>bubble-sort</artifactId>
+  <artifactId>select-sort</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>bubble-sort</name>
+  <name>select-sort</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-     <maven.compiler.target>14</maven.compiler.target>
+    <maven.compiler.target>14</maven.compiler.target>
     <maven.compiler.source>14</maven.compiler.source>
   </properties>
 

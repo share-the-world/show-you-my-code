@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest{
+public class AppTest2{
    App app = new App();
    int[] one = new int[1];
    int[] two = new int[10];
@@ -28,47 +28,47 @@ public class AppTest{
    @Test
    public void testDoItOne(){
       System.out.print(1 + "  ");
-      app.doItAsc(one);
+      app.cocktail(one);
       System.out.println("----------------");
    }    
 
    @Test
    public void testDoItTwo(){
       System.out.print(2 + "  ");
-      app.doItAsc(two);
+      app.cocktail(two);
       System.out.println("----------------");
    }
    @Test
    public void testDoItThree(){
       System.out.print(3 + "  ");
-      app.doItAsc(three);
+      app.cocktail(three);
       System.out.println("----------------");
    }
    @Test
    public void testDoItFour(){
       System.out.print(4 + "  ");
-      app.doItAsc(four);
+      app.cocktail(four);
       System.out.println("----------------");
    }
    @Test
    public void testDoItFive(){
       System.out.print(5 + "  ");
-      app.doItAsc(five);
+      app.cocktail(five);
       System.out.println("----------------");
    }
    @Test
    public void testDoItSix(){
       System.out.print(6 + "  ");
-      app.doItAsc(six);
+      app.cocktail(six);
       System.out.println("----------------");
    } 
 
-   // @Test
+   @Test
    public void testDoItSeven(){
       System.out.print(7 + "  ");
       int[] seven = generateRandomNumber(1000000);
       long start = System.currentTimeMillis();
-      app.doItAsc(seven);
+      app.cocktail(seven);
       long end = System.currentTimeMillis();
       System.out.println("----------------");
       System.out.println("耗时："+ (end - start));

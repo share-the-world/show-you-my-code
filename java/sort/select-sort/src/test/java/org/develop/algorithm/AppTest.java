@@ -28,38 +28,38 @@ public class AppTest{
    @Test
    public void testDoItOne(){
       System.out.print(1 + "  ");
-      app.doItAsc(one);
+      app.selectSort(one);
       System.out.println("----------------");
    }    
 
    @Test
    public void testDoItTwo(){
       System.out.print(2 + "  ");
-      app.doItAsc(two);
+      app.selectSort(two);
       System.out.println("----------------");
    }
    @Test
    public void testDoItThree(){
       System.out.print(3 + "  ");
-      app.doItAsc(three);
+      app.selectSort(three);
       System.out.println("----------------");
    }
    @Test
    public void testDoItFour(){
       System.out.print(4 + "  ");
-      app.doItAsc(four);
+      app.selectSort(four);
       System.out.println("----------------");
    }
    @Test
    public void testDoItFive(){
       System.out.print(5 + "  ");
-      app.doItAsc(five);
+      app.selectSort(five);
       System.out.println("----------------");
    }
    @Test
    public void testDoItSix(){
       System.out.print(6 + "  ");
-      app.doItAsc(six);
+      app.selectSort(six);
       System.out.println("----------------");
    } 
 
@@ -68,7 +68,7 @@ public class AppTest{
       System.out.print(7 + "  ");
       int[] seven = generateRandomNumber(1000000);
       long start = System.currentTimeMillis();
-      app.doItAsc(seven);
+      app.selectSort(seven);
       long end = System.currentTimeMillis();
       System.out.println("----------------");
       System.out.println("耗时："+ (end - start));
