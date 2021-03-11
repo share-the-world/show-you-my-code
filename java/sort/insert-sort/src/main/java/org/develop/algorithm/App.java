@@ -5,7 +5,11 @@ package org.develop.algorithm;
  * @author hsy
  */
 public class App{
-
+    /**
+     * Arrays.sort(nums); 性能远高于插入排序
+     * @param nums
+     * @return
+     */
     public int[] insertSort(int[] nums){
         int swapCount = 0;
         int i, j;
