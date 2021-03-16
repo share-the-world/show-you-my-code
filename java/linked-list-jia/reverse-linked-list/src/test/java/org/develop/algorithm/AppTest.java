@@ -25,11 +25,11 @@ public class AppTest{
         four.setNext(five);
     }
     @Test
-    public void removeNthFromEnd1(){
-        log.info("" + app.removeNthFromEnd1(head, 2)); 
+    public void reverseList(){
+        log.info("" + app.reverseList(head)); 
     }
     @Test
-    public void removeNthFromEnd2(){
-        log.info("" + app.removeNthFromEnd2(head, 2)); 
+    public void reverseList2(){
+        log.info("" + app.reverseList2(head)); 
     }
 }

@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.develop.algorithm</groupId>
-  <artifactId>remove-nth-from-end</artifactId>
+  <artifactId>reverse-linked-list</artifactId>
   <version>1.0</version>
 
-  <name>remove-nth-from-end</name>
+  <name>reverse-linked-list</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
