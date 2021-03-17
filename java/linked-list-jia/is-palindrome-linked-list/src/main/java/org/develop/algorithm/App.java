@@ -1,13 +1,14 @@
 package org.develop.algorithm;
 
+import java.util.ArrayList;
 import java.util.List;
-
 /**
  * Hello world!
  * @author hsy
  */
 public class App{
-    public booelan isPalindrome1(ListNode head){
+    
+    public boolean isPalindrome1(ListNode head){
         List<Integer> listNode = new ArrayList();
 
         ListNode curr = head;
@@ -33,20 +34,20 @@ public class App{
         恢复链表。
         返回结果。
      */
-    public booelan isPalindrome2(ListNode head){
+    public boolean isPalindrome2(ListNode head){
         ListNode halfNode = getHalfNode(head);
         ListNode reverseNode = reverseList(halfNode);
         ListNode start = head;
         ListNode half = reverseNode;
         boolean result = true;
-        while(result && null!=half){
+        while(result && null!=start && null!=half){
             if(!start.getValue().equals(half.getValue())){
                 result = false;
             }
             start = start.getNext();
             half = half.getNext();
         }
-        half.setNext(reverseNode(half));
+        halfNode.setNext(reverseList(reverseNode));
         return result;
     }
     public ListNode reverseList(ListNode head){
@@ -67,9 +68,9 @@ public class App{
     public ListNode getHalfNode(ListNode head){
         ListNode fast = head;
         ListNode slow = head;
-        while(null!=fast && null!=fast.getNext()){
-            fast = head.getNext().getNext();
-            slow = head.getNext();
+        while(null!=fast.getNext() && null!=fast.getNext().getNext()){
+            fast = fast.getNext().getNext();
+            slow = slow.getNext();
         }
         return slow;
     }
