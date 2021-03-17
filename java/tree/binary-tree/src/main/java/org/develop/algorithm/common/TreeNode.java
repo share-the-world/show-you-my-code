@@ -18,4 +18,14 @@ public class TreeNode {
         this.val = val;
     } 
     public TreeNode() {}
+
+    @Override
+    public String toString() {
+        return "{" +
+            " val='" + val + "'" +
+            ", left='" + left + "'" +
+            ", right='" + right + "'" +
+            "}";
+    }
+
 }
