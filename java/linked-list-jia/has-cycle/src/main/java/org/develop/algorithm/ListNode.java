@@ -11,16 +11,16 @@ public class ListNode{
     public int val;
     public ListNode next;
 
-    public ListNode(Integer value){
-        this.value = value;
+    public ListNode(int value){
+        this.val = value;
     }
-    public ListNode(Integer value, ListNode next) {
-        this.value = value;
+    public ListNode(int value, ListNode next) {
+        this.val = value;
         this.next = next;
     }
 
     @Override
     public String toString() {
-        return "ListNode [next=" + next + ", value=" + value + "]";
+        return "ListNode [next=" + next + ", val=" + val + "]";
     }
 }

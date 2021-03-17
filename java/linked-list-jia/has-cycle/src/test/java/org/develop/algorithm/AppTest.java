@@ -2,6 +2,8 @@ package org.develop.algorithm;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.logging.Logger;
+
 import org.junit.Test;
 
 /**
@@ -14,13 +16,14 @@ public class AppTest{
     static{
         head = new ListNode(1);
         ListNode two = new ListNode(2);
-        // ListNode three = new ListNode(2);
-        // ListNode four = new ListNode(1);
-        head.setNext(two);
-        // two.setNext(three);
-        // three.setNext(four);
+        ListNode three = new ListNode(2);
+        ListNode four = new ListNode(1);
+        head.next = two;
+        two.next = three;
+        three.next = four;
     }
     @Test
     public void hasCycle(){
+        log.info("" + app.hasCycle(head));
     }
 }
