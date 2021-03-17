@@ -5,14 +5,14 @@ package org.develop.algorithm.common;
 public class TreeNodeUtil {
    
     public static TreeNode generate(){
-        TreeNode root = new TreeNode(10);
-        TreeNode one = new TreeNode(4);
-        TreeNode two = new TreeNode(55);
+        TreeNode root = new TreeNode(1);
+        TreeNode one = new TreeNode(2);
+        TreeNode two = new TreeNode(3);
         TreeNode three = new TreeNode(4);
-        TreeNode four = new TreeNode(77);
-        TreeNode five = new TreeNode(23);
-        TreeNode six = new TreeNode(10);
-        TreeNode seven = new TreeNode(23);
+        TreeNode four = new TreeNode(5);
+        TreeNode five = new TreeNode(6);
+        TreeNode six = new TreeNode(7);
+        TreeNode seven = new TreeNode(8);
         root.left = one;
         root.right = two;
         one.left = three;
