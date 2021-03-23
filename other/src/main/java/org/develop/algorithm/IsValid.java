@@ -6,6 +6,10 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class IsValid {
+    /**
+     * 因为成对的括号，存在先进做括号，后出右括号的规则，
+     * 所以遇到左括号就进栈，遇到右括号就出栈并且校验，直到最后都抵消为空
+     */
     public boolean isValid(String s) {
         Map<Character, Character> map = new HashMap<>();
         map.put('(', ')');
