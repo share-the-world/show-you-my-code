@@ -12,7 +12,6 @@ import org.develop.algorithm.common.TreeNode;
  * @author hsy
  */
 public class LevelOrder {
-    public static String aaa = "222";
     public List<List<Integer>> levelOrder(TreeNode root){
         List<List<Integer>> returnData = new ArrayList<>();
         if(null==root){
