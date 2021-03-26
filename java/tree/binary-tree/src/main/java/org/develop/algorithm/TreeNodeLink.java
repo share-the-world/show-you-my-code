@@ -41,4 +41,29 @@ public class TreeNodeLink {
         }
         return root;
     }
+    /**
+     * 指针法:高效
+     * 时间复杂度：O(N)，每个节点只访问一次。
+       空间复杂度：O(1)，不需要存储额外的节点。
+     * @param root
+     * @return
+     */
+    public TreeLinkedNode connect2(TreeLinkedNode root) {
+        if(null == root){
+            return root;
+        }
+        TreeLinkedNode leftMost = root;
+        while(null!=leftMost.left){
+            TreeLinkedNode curr = leftMost;
+            while(null!=curr){
+                curr.left.next = curr.right;
+                if(null!=curr.next){
+                    curr.right.next = curr.next.left;
+                }
+                curr = curr.next;
+            }
+            leftMost = leftMost.left;
+        }
+        return root;
+    }
 }
