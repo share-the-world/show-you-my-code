@@ -13,7 +13,6 @@ public class Solution {
 
     /**
      * 右子树 》 值 》左子树
-     * @param root 二叉树根节点
      * @return 排序后的数组
      */
     public List<Integer> doIt(Integer[] treeArray){
