@@ -12,7 +12,7 @@ import org.junit.Test;
  */
 public class AppTest {
     Logger logger = Logger.getLogger(AppTest.class.getName());
-    App app = new App();
+    TwoSum app = new TwoSum();
 
     @Test
     public void twoSum(){

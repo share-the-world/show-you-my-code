@@ -3,6 +3,7 @@
 */target
 */*/target
 */*/*.iml
+*/*/*/*.iml
 .vscode
 */*/.classpath
 */*/.project
