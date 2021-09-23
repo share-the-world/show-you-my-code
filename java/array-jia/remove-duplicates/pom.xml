@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.develop.algorithm</groupId>
-  <artifactId>02_remove_duplicates</artifactId>
+  <artifactId>remove-duplicates</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>02_remove_duplicates</name>
+  <name>remove-duplicates</name>
   <url>http://maven.apache.org</url>
 
   <properties>
