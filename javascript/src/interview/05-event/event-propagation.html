@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" title="事件冒泡">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 200px; background-color: rebeccapurple" id="div1">
+      div1
+      <div style="height: 80px; background-color: blue; margin-top: 50px" id="div2">
+        div2
+      </div>
+    </div>
+    <script>
+      document.getElementById('div1').onclick = function(e){
+        console.log('target=-',e.target)
+        console.log('currentTarget=-',e.currentTarget)
+      }
+      document.getElementById('div2').onclick = function(e){
+        e.stopPropagation()
+        console.log('target=-',e.target)
+        console.log('currentTarget=-',e.currentTarget)
+      }
+
+      document.getElementById('div1').addEventListener('click', (e) => {
+        console.log('事件捕获 div1')
+      }, true)
+      document.getElementById('div2').addEventListener('click', (e) => {
+        console.log('事件捕获 div2')
+      }, true)
+    </script>
+  </body>
+</html>

@@ -16,27 +16,48 @@ function ListNode(val, next) {
  */
 
 var mergeTwoLists = function (list1, list2) {
-  let head1 = list1.val > list2.val ? list1 : list2;
-  let head2 = list1.val > list2.val ? list2 : list1;
-  console.log("head1", head1);
-  console.log("head2", head2);
-  do {
-    if (head1.val >= head2.val && head1.val <= head2.next.val && head2.next) {
-      let temp1 = head1.next;
-      let temp2 = head2.next;
-      head2.next = head1;
-      head1.next = temp2.next;
+  let large = list1.val > list2.val ? list1 : list2;
+  let small = list1.val > list2.val ? list2 : list1;
 
-      head1 = temp1.next;
-      head2 = temp2;
-    } else {
-      head2 = head2.next;
+  const queue = [small];
+  do {
+    const last = queue[queue.length - 1];
+    const ll = queue[queue.length - 2];
+    if (last.val < large.val) {
+      queue.push(last.next ? last.next : large);
+    } else if (ll) {
+      ll.next = large;
+      queue.pop();
+      queue.push(large);
+      const temp = large.next;
+      large.next = small;
+      large = temp;
     }
-  } while (head1 && head2.next);
-  head2.next = head1;
-  console.log("list1", JSON.stringify(list1));
-  console.log("list2", list2);
+    console.log(
+      `queue:${queue.map((v) => (v ? v.val : undefined))}\t`,
+      `large:${toArray(large)}\t`,
+      `small:${toArray(small)}\t`,
+      "\n"
+    );
+  } while (large && small);
+  console.log("large", large);
+  console.log("small", small);
+  return queue[0];
 };
+
+/**
+ * 链表转数组
+ * @param {ListNode} link
+ * @returns {Array<number>}
+ */
+function toArray(link) {
+  const arr = [];
+  while (link) {
+    arr.push(link.val);
+    link = link.next;
+  }
+  return arr;
+}
 
 /**
  *数组转链表
@@ -56,10 +77,14 @@ const array2Link = (arr) => {
 };
 
 // node javascript/src/code/164/index.js
-const l1 = [8, 8, 9, 11],
-  l2 = [1, 4, 10];
+// const l1 = [8, 8, 9, 11],
+//   l2 = [1, 4, 10];
+const l1 = [5, 5, 6],
+  l2 = [1, 3, 4];
 
 // console.log(JSON.stringify(array2Link([1, 2, 4, 6, 7, 4])));
 // console.log("[]", JSON.stringify(array2Link([])));
 
-console.log(mergeTwoLists(array2Link(l1), array2Link(l2)));
+console.log(JSON.stringify(mergeTwoLists(array2Link(l1), array2Link(l2))));
+// console.log("数组->链表", array2Link(l1));
+// console.log("链表换数组", toArray(array2Link(l1)));
