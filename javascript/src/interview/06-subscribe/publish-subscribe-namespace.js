@@ -8,7 +8,7 @@ function Emiter() {
     map[namespace].push(fn);
     return () => {
       removeListener(namespace, fn);
-    };
+    }; 
   };
 
   const emit = (namespace, ...args) => {
