@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3.实现Animal类，可以同时达到以下效果:
+
+        // 输入: 
+        // new Animal('dog');
+        // 输出: 
+        // This is dog
+
+        // 输入:
+        // new Animal('cat').sleep(5).eat('dinner');
+        // 输出：
+        // This is cat
+        // Sleep 5s ...
+        // Wake up after 5s
+        // Eat dinner~
+
+        // 输入:
+        // new Animal('cat').eat('dinner').eat('supper');
+        // 输出：
+        // This is cat
+        // Eat dinner~
+        // Eat supper~
+
+        // 输入:
+        // new Animal('cat').sleepFirst(5).eat('supper');
+        // 输出：
+        // Sleep 5s ...
+        // Wake up after 5s
+        // Hi This is cat!
+        // Eat supper~
+
+        class Animal {
+            constructor (animal) {
+                this.animal = animal
+                this.fns = []
+                this.saiHi()
+
+                Promise.resolve().then(() => {
+                    this.executeFns()
+                })
+            }
+
+            sleepFirst(time) {
+                this.fns.unshift(() => {
+                    return new Promise(resolve => {
+                        console.log(`Sleep ${time}s ...`)
+                        setTimeout(() => {
+                            console.log(`Wake up after ${time}s`)
+                            resolve()
+                        }, time * 1000)
+                    })
+                })
+
+                return this
+            }
+
+            sleep(time) {
+                this.fns.push(() => {
+                    return new Promise(resolve => {
+                        console.log(`Sleep ${time}s ...`)
+                        setTimeout(() => {
+                            console.log(`Wake up after ${time}s`)
+                            resolve()
+                        }, time * 1000)
+                    })
+                })
+
+                return this
+            }
+
+            eat(something) {
+                this.fns.push(() => console.log(`Eat ${something}~`))
+                return this
+            }
+
+            saiHi() {
+                this.fns.push(() => console.log(`Hi This is ${this.animal}!`))
+            }
+
+            async executeFns() {
+                for (const fn of this.fns) {
+                    const result = fn()
+                    if (isPromise(result)) {
+                        await result
+                    }
+                }
+            }
+        }
+
+        function isPromise(obj) {
+            return obj !== null && typeof obj?.then === 'function'
+        }
+
+        // new Animal('dog');
+        // new Animal('cat').sleep(5).eat('dinner');
+        // new Animal('cat').eat('dinner').eat('supper');
+        new Animal('cat').sleepFirst(5).eat('supper');
+    </script>
+</body>
+</html>

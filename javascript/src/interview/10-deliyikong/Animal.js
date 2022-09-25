@@ -28,7 +28,6 @@ function Animal(name) {
     }
     return this;
   };
-
 }
 
 // new Animal("cat").sleep(5).eat("dinner");
